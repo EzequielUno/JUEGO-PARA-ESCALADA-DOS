@@ -154,8 +154,10 @@ function registrarResultado(exito) {
     
     if (exito) {
         totalScore += currentRoutePoints;
+        new Audio('juego/mixkit-small-win-2020.wav').play();
         alert(`¡Excelente ${playerName}! Has sumado ${currentRoutePoints} puntos.`);
     } else {
+        new Audio('juego/mixkit-player-losing-or-failing-2042.wav').play();
         alert(`¡No pasa nada ${playerName}! Lo importante es intentarlo. ¡A por la siguiente!`);
     }
 
