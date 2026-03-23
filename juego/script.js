@@ -27,7 +27,7 @@ const LEVEL_CONFIG = {
         "points": 200
     },
     3: {
-        "name": "Avanzado - Techo Loco",
+        "name": "Avanzado - Desplome Loco",
         "sectors": ["Desplome", "Techo"],
         "types": ["Boulder"],
         "hold_distribution": {
