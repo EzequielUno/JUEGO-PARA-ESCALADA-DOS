@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escalada Kids 🧗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🧗 Generador de Vías 🧗</h1>
+    <p>¡Elige tu nivel y descubre tu reto!</p>
+    
+    <div id="player-section">
+        <input type="text" id="player-name" placeholder="Tu nombre de escalador">
+    </div>
+    <div id="score-board">Puntos Totales: 0</div>
+    
+    <div class="level-selector">
+        <label for="level">Nivel de Dificultad:</label>
+        <select id="level">
+            <option value="1">Nivel 1 (Principiante)</option>
+            <option value="2">Nivel 2 (Intermedio)</option>
+            <option value="3">Nivel 3 (Avanzado)</option>
+        </select>
+        <button onclick="generarVia()">¡Armar Vía!</button>
+    </div>
+
+    <div id="result-card" class="result-card">
+        <h2 id="route-title"></h2>
+        <p><strong>Sector:</strong> <span id="route-sector"></span></p>
+        <p><strong>Tipo de Vía:</strong> <span id="route-type" class="tag"></span></p>
+        <h3>🛠️ Material Necesario:</h3>
+        <ul id="holds-list" class="holds-list">
+            <!-- Las presas se generarán aquí -->
+        </ul>
+
+        <div id="action-buttons">
+            <p>¿Lograste encadenar la vía?</p>
+            <button class="btn-success" onclick="registrarResultado(true)">¡Lo logré! 🎉</button>
+            <button class="btn-fail" onclick="registrarResultado(false)">No pudo ser 😅</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
